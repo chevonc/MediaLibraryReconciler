@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,8 +40,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Models\IDv3MetaMismatchField.cs" />
+    <Compile Include="Models\IDv3MistmatchOptions.cs" />
+    <Compile Include="Models\IDv3ImageFieldWrapper.cs" />
+    <Compile Include="Processors\IDv3MistmatchHelper.cs" />
+    <Compile Include="Models\IDv3ReconcilableFile.cs" />
+    <Compile Include="Processors\IDv3ReconcilePredicateFactory.cs" />
+    <Compile Include="Models\IDv3ReconileAction.cs" />
+    <Compile Include="Models\IDv3MetaMismatchReason.cs" />
+    <Compile Include="Models\IDv3ReconileResult.cs" />
+    <Compile Include="Interop\DownloadedFileUnblocker.cs" />
+    <Compile Include="Processors\IDv3ReconcileProcessor.cs" />
+    <Compile Include="IDv3Reconciler.cs" />
+    <Compile Include="Processors\IDv3ReconilerActionFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\id3lib\ID3Lib\Id3Lib.csproj">
+      <Project>{4C0E405B-FBE5-4949-8953-0B4AEB0D22B8}</Project>
+      <Name>Id3Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\id3lib\Mp3Lib\Mp3Lib.csproj">
+      <Project>{E16E2254-A7A2-4E45-95B9-8613C67B3FD4}</Project>
+      <Name>Mp3Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
