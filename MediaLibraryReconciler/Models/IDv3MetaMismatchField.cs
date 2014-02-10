@@ -1,13 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MediaLibraryReconciler.Flags
+namespace MediaLibraryReconciler.Models
 {
-   enum MP3MetaMismatchOption
+   public enum IDv3MetaMismatchField
    {
+      None,
       FileName,
       Folder,
       GrandparentFolder,
@@ -16,14 +17,9 @@ namespace MediaLibraryReconciler.Flags
       Artist,
       Album,
       Genre,
+      Composer,
+      Lyrics,
+      Comment,
       Picture
-   }
-
-   enum MP3MetaMismatchReason
-   {
-      Empty,
-      DoesNotMatch,
-      Blocked,
-      UrlFormatted,
    }
 }

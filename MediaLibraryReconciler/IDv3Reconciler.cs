@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MediaLibraryReconciler
 {
-   class MP3Reconciler
+   class IDv3Reconciler
    {
    }
 }
