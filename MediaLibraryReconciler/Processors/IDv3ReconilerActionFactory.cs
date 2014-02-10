@@ -106,8 +106,8 @@ namespace MediaLibraryReconciler.Processors
          {
             reconcile = () =>
                {
-                  string newValue = getNewValue();
-                  IDv3MistmatchHelper.SetIDv3FieldValue(song, options.TargetField, newValue);
+                            string grandparentFolderName = getNewValue();
+                            IDv3MistmatchHelper.SetIDv3FieldValue(song, options.TargetField, grandparentFolderName);
                };
          }
 
