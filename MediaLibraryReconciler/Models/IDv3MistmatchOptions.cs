@@ -3,39 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace MediaLibraryReconciler.Models
 {
-   public struct IDv3MistmatchOptions
+   [DebuggerDisplay(@"T: {TargetField}\R: {Criteria}\C: {ComparisonField}")]
+   public struct IDv3MistmatchOption
    {
-      public IDv3MistmatchOptions(IDv3MetaMismatchField targetField,
-      IDv3MetaMismatchReason criteria) :
+      public IDv3MistmatchOption(IDv3MetaMismatchField targetField,
+      IDv3MetaMismatchCriteria criteria) :
          this(targetField, criteria, IDv3MetaMismatchField.None)
       {
 
       }
-      public IDv3MistmatchOptions(IDv3MetaMismatchField targetField,
-         IDv3MetaMismatchReason reason, IDv3MetaMismatchField comparisonField):this()
+      public IDv3MistmatchOption(IDv3MetaMismatchField targetField,
+         IDv3MetaMismatchCriteria reason, IDv3MetaMismatchField comparisonField):this()
       {
          r_targetField = targetField;
-         r_reason = reason;
+         r_criteria = reason;
          r_comparisonField = comparisonField;
       }
 
       private readonly IDv3MetaMismatchField r_comparisonField;
-      private readonly IDv3MetaMismatchReason r_reason;
+      private readonly IDv3MetaMismatchCriteria r_criteria;
       private readonly IDv3MetaMismatchField r_targetField;
       public IDv3MetaMismatchField TargetField
       {
          get { return r_targetField; }
       }
-      public IDv3MetaMismatchReason Reason
+      public IDv3MetaMismatchCriteria Criteria
       {
-         get { return r_reason; }
+         get { return r_criteria; }
       }
       public IDv3MetaMismatchField ComparisonField
       {
          get { return r_comparisonField; }
       }
+
    }
+
 }

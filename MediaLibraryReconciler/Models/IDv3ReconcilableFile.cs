@@ -21,11 +21,27 @@ namespace MediaLibraryReconciler.Models
          }
          if(!File.Exists(path))
          {
-            throw new FileNotFoundException(string.Format("{File does not exist. Name: {0}", path));
+            throw new FileNotFoundException(string.Format("File does not exist. Name: {0}", path));
          }
 
          m_file = new Mp3File(path);
          m_path = path;
+      }
+
+      public IDv3ReconcilableFile(FileInfo file)
+      {
+         if(file == null)
+         {
+            throw new ArgumentNullException("file");
+         }
+
+         if(!file.Exists)
+         {
+            throw new FileNotFoundException(string.Format("File does not exist. Name: {0}", file.FullName));
+         }
+
+         m_file = new Mp3File(file);
+         m_path = file.FullName;
       }
 
       public TagHandler TagHandler

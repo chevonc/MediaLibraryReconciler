@@ -1,4 +1,5 @@
-﻿using Mp3Lib;
+﻿using MediaLibraryReconciler.Models;
+using Mp3Lib;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,18 +12,30 @@ namespace MediaLibraryReconciler.ConsoleTestApp
 {
    class Program
    {
+      private static List<IDv3MistmatchOption> GetOptions()
+      {
+         return new List<IDv3MistmatchOption>()
+         {
+            IDv3MismatchOptionHelper.ArtistIsEmpty,
+            IDv3MismatchOptionHelper.AlbumIsEmpty,
+            IDv3MismatchOptionHelper.GenreIsEmpty,
+            IDv3MismatchOptionHelper.TitleIsEmpty,
+            IDv3MismatchOptionHelper.AlbumContainsLink,
+            IDv3MismatchOptionHelper.ArtistContainsLink,
+            IDv3MismatchOptionHelper.CommentContainsLink,
+            IDv3MismatchOptionHelper.ComposerContainsLink,
+            IDv3MismatchOptionHelper.AlbumDoesNotMatchFolder,
+            IDv3MismatchOptionHelper.ArtistDoesNotMatchGrandparentFolder,
+            IDv3MismatchOptionHelper.TitleDoesNotMatchFileName,
+            IDv3MismatchOptionHelper.FileIsBlocked,
+         };
+      }
       static void Main(string[] args)
       {
-         string testSong = Path.Combine(string.Format("{0}\\TestFiles\\SkyJames.mp3", Directory.GetCurrentDirectory()));
+         string testSong = Path.Combine(string.Format("{0}\\TestFiles\\", Directory.GetCurrentDirectory()));
          Stopwatch sw = new Stopwatch();
-         sw.Restart();
-         Mp3File song = new Mp3File(testSong);
-         song.TagHandler.Album = "MyAlbum" + DateTime.Now.ToLongTimeString(); ;
-         song.Update();
-         sw.Stop();
-         Console.WriteLine(sw.Elapsed.TotalSeconds);
-         Mp3File song1 = new Mp3File(testSong);
-         Console.WriteLine(song1.TagHandler.Album);
+         IDv3Reconciler reconciler = new IDv3Reconciler(testSong, GetOptions());
+         reconciler.Reconcile();
          Console.ReadKey();
       }
    }

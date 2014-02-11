@@ -12,7 +12,6 @@ namespace MediaLibraryReconciler.Models
       FileName,
       Folder,
       GrandparentFolder,
-      FileZoneIdentifier,
       Title,
       Artist,
       Album,

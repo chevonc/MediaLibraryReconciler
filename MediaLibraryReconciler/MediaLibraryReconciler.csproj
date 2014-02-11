@@ -41,13 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\IDv3MetaMismatchField.cs" />
+    <Compile Include="Models\IDv3MistmatchOptionHelper.cs" />
     <Compile Include="Models\IDv3MistmatchOptions.cs" />
     <Compile Include="Models\IDv3ImageFieldWrapper.cs" />
     <Compile Include="Models\IDv3ReconcileAction.cs" />
+    <Compile Include="Models\IDv3ReconilePackage.cs" />
     <Compile Include="Processors\IDv3MistmatchHelper.cs" />
     <Compile Include="Models\IDv3ReconcilableFile.cs" />
     <Compile Include="Processors\IDv3ReconcilePredicateFactory.cs" />
-    <Compile Include="Models\IDv3ReconileAction.cs" />
     <Compile Include="Models\IDv3MetaMismatchReason.cs" />
     <Compile Include="Models\IDv3ReconileResult.cs" />
     <Compile Include="Interop\DownloadedFileUnblocker.cs" />

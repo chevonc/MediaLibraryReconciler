@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MediaLibraryReconciler.Models
 {
-   public enum IDv3MetaMismatchReason
+   public enum IDv3MetaMismatchCriteria
    {
       None,
       Empty,

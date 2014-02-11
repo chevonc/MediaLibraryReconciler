@@ -61,6 +61,117 @@
       <Project>{e16e2254-a7a2-4e45-95b9-8613c67b3fd4}</Project>
       <Name>Mp3Lib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MediaLibraryReconciler\MediaLibraryReconciler.csproj">
+      <Project>{3c40f26b-1fa2-4ab1-a1d9-a301690c9833}</Project>
+      <Name>MediaLibraryReconciler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestFiles\2Pac\Loyal To The Game %28Parental Advisory%29\Who Do You Love_ %28Album Version - Explicit%29 2cc9c9cc.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\2Pac\The Best Of 2Pac, Part 1_ Thug %28Edited%29\2 Of Amerikaz Most Wanted %28Album Version - Edited%29.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\2Pac\The Best Of 2Pac, Part 1_ Thug %28Edited%29\California Love %28Original Version - Edited%29.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\2Pac\The Best Of 2Pac, Part 1_ Thug %28Edited%29\Changes %281998 Greatest Hits - Edited%29.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\2Pac\The Best Of 2Pac, Part 1_ Thug %28Edited%29\Dear Mama %28New Remix Version - Edited%29.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\2Pac\The Best Of 2Pac, Part 1_ Thug %28Edited%29\Hail Mary %28Album Version - Edited%29.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\50 Cent\Get Rich Or Die Tryin%27\Back Down %28Album Version - Explicit%29.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\50 Cent\Get Rich Or Die Tryin%27\Blood Hound %28Album Version - Explicit%29.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\50 Cent\Get Rich Or Die Tryin%27\Don%27t Push Me %28Album Version - Explicit%29.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\50 Cent\Get Rich Or Die Tryin%27\Gotta Make It To Heaven %28Parental Advisory%29.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\50 Cent\Get Rich Or Die Tryin%27\Heat %28Parental Advisory%29.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\01. Palace %28Prod by Clams Casino%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\02. Peso %28Prod by ASAP Ty Beats%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\03. Bass %28Prod by Clams Casino%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\04. Wassup %28Prod by Clams Casino%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\05. Brand New Guy feat Schoolboy Q %28Prod By Lyle%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\06. Purple Swag Chapter 2 feat Spaceghost Purrp &amp; ASAP Nast.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\07. Get Lit feat Fat Tony %28Prod By Soufein3000%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\08. Trilla feat ASAP Twelvy &amp; ASAP Nast %28Prod By Beautiful Lou%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\09. Keep It G feat Chace Infinite &amp; Spaceghost Purrp %28Prod by Spaceghost Purrp%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\10. Kissin Pink feat ASAP Ferg %28Prod by Beautiful Lou%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\11. Houston Old Head %28Prod By DJ Burn One%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\12. Acid Drip %28Prod by Soufein3000%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\13. Leaf feat Main Attrakionz %28Prod by Clams Casino%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\14. Roll One Up %28Prod by DJ Burn One%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\15. Demons %28Prod by Clams Casino%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\LiveLoveA%24SAP\16. Bonus - Out Of This World %28Prod by The Olympicks%29.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\A%24AP Rocky\Purple Swag\Purple Swag.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\Action Bronson\Bird On A Wire %28Single%29\Bird On A Wire %28Dirty%29.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\Action Bronson\SAAAB Stories produced by Harry Fraud\2 Virgins %28feat. Big Body Bes%29.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\Action Bronson\SAAAB Stories produced by Harry Fraud\Alligator.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\Action Bronson\SAAAB Stories produced by Harry Fraud\No Time.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\Damian _Jr. Gong_ Marley\Welcome to Jamrock %28Edited%29\Beautiful.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\Damian _Jr. Gong_ Marley\Welcome to Jamrock %28Edited%29\Confrontation.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\Damian _Jr. Gong_ Marley\Welcome to Jamrock %28Edited%29\For The Babies.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

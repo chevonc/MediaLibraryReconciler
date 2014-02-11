@@ -14,15 +14,15 @@ namespace MediaLibraryReconciler.Processors
 {
    internal class IDv3ReconilerActionFactory
    {
-      private static Action CreateNotYetImplementedReconcileAction(IDv3MistmatchOptions options)
+      private static Action CreateNotYetImplementedReconcileAction(IDv3MistmatchOption options)
       {
          return () =>
          {
             throw new NotImplementedException(string.Format("Reconciliation not yet implemented for {0} > {1} > {2}",
-               options.TargetField, options.Reason, options.ComparisonField));
+               options.TargetField, options.Criteria, options.ComparisonField));
          };
       } 
-      internal static IDv3ReconcileAction CreateUpdateFieldToMatch(IDv3ReconcilableFile song, IDv3MistmatchOptions options)
+      internal static IDv3ReconcileAction CreateUpdateFieldToMatch(IDv3ReconcilableFile song, IDv3MistmatchOption options)
       {
          Func<string> getCurrentValue = () => IDv3MistmatchHelper.GetIDv3MismatchFieldValueAs<string>(song, options.TargetField);
          Func<string> getNewValue = () => IDv3MistmatchHelper.GetIDv3MismatchFieldValueAs<string>(song, options.ComparisonField);
@@ -59,10 +59,10 @@ namespace MediaLibraryReconciler.Processors
          return new IDv3ReconcileAction(getCurrentValue, getNewValue, reconcile);
       }
 
-      internal static IDv3ReconcileAction CreateFixEmptyField(IDv3ReconcilableFile song, IDv3MistmatchOptions options)
+      internal static IDv3ReconcileAction CreateFixEmptyField(IDv3ReconcilableFile song, IDv3MistmatchOption options)
       {
          Func<string> getCurrentValue = () => IDv3MistmatchHelper.GetIDv3MismatchFieldValueAs<string>(song, options.TargetField);
-         Func<string> getNewValue = () => null;
+         Func<string> getNewValue = null;
          Action reconcile = null;
 
          switch (options.TargetField)
@@ -92,9 +92,6 @@ namespace MediaLibraryReconciler.Processors
                   return parentFolder;
                };
                break;
-            default:
-               reconcile = CreateNotYetImplementedReconcileAction(options);
-               break;
          }
 
          if(getNewValue == null)
@@ -114,7 +111,7 @@ namespace MediaLibraryReconciler.Processors
          return new IDv3ReconcileAction(getCurrentValue, getNewValue, reconcile);
       }
 
-      internal static IDv3ReconcileAction CreateUnblockFile(IDv3ReconcilableFile song, IDv3MistmatchOptions options)
+      internal static IDv3ReconcileAction CreateUnblockFile(IDv3ReconcilableFile song, IDv3MistmatchOption options)
       {
          if(options.TargetField != IDv3MetaMismatchField.FileName)
          {
@@ -132,7 +129,7 @@ namespace MediaLibraryReconciler.Processors
          return new IDv3ReconcileAction(notApplicable, notApplicable, reconile);
       }
 
-      internal static IDv3ReconcileAction CreateFixUrlField(IDv3ReconcilableFile song, IDv3MistmatchOptions options)
+      internal static IDv3ReconcileAction CreateFixUrlField(IDv3ReconcilableFile song, IDv3MistmatchOption options)
       {
          Func<string> getCurrentValue = () => IDv3MistmatchHelper.GetIDv3MismatchFieldValueAs<string>(song, options.TargetField);
          Func<string> getNewValue = null;
@@ -164,6 +161,11 @@ namespace MediaLibraryReconciler.Processors
                      song, IDv3MetaMismatchField.Folder);
                   return parentFolder;
                };
+               break;
+            case IDv3MetaMismatchField.Genre:
+            case IDv3MetaMismatchField.Composer:
+            case IDv3MetaMismatchField.Lyrics:
+               getNewValue = () => { return string.Empty; };
                break;
          }
          if (getNewValue == null)

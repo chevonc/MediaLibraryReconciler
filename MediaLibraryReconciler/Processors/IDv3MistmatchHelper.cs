@@ -41,6 +41,15 @@ namespace MediaLibraryReconciler.Processors
             case IDv3MetaMismatchField.Genre:
                ret = song.TagHandler.Genre;
                break;
+            case IDv3MetaMismatchField.Composer:
+               ret = song.TagHandler.Composer;
+               break;
+            case IDv3MetaMismatchField.Comment:
+               ret = song.TagHandler.Comment;
+               break;
+            case IDv3MetaMismatchField.Lyrics:
+               ret = song.TagHandler.Lyrics;
+               break;
             case IDv3MetaMismatchField.Picture:
                ret = song.TagHandler.Picture;
                break;
